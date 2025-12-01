@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "lodash": "^4.17.21",
     "mongoose": "^9.0.0",
