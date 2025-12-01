@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>List App</title>
-  <link rel="stylesheet" href="/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List Generator</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <h1>Welcome to the List App</h1>
-  <p>Create any kind of list you want: groceries, goals, movies, anything.</p>
+  <div class="app">
+    <header class="app-header">
+      <div class="logo-circle">L</div>
+      <div class="app-title-group">
+        <h1 class="app-title">List Generator</h1>
+        <p class="app-subtitle">Simple, flexible lists for anything in your life.</p>
+      </div>
+    </header>
 
-  <a href="/lists/new"><button>Create a New List</button></a>
-  <br><br>
-  <a href="/lists">View All Lists</a>
+    <main class="app-main">
+      <section class="card">
+        <h2 class="card-title">Welcome 👋</h2>
+        <p class="card-text">
+          Create and manage custom lists for groceries, goals, movies, to-dos, or whatever
+          you need to keep track of.
+        </p>
+
+        <div class="card-actions">
+          <a href="/lists/new" class="btn btn-primary">Create a New List</a>
+          <a href="/lists" class="btn btn-secondary">View All Lists</a>
+        </div>
+      </section>
+
+      <section class="quick-info">
+        <h3>How it works</h3>
+        <ul>
+          <li>Create a list and give it a name.</li>
+          <li>Add and remove items anytime.</li>
+          <li>Come back later to manage all your lists.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Built with Node, Express & MongoDB</small>
+    </footer>
+  </div>
 </body>
 </html>
