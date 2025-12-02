@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= list.title %> - List</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1><%= list.title %></h1>
+      <div class="header-actions">
+        <a href="/lists/<%= list._id %>/edit">Edit</a>
+
+        <form action="/lists/<%= list._id %>/delete" method="POST" style="display:inline;">
+          <button type="submit" onclick="return confirm('Delete this list?')">
+            Delete
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Placeholder for items later if you want -->
+    <% if (list.items && list.items.length > 0) { %>
+      <h2>Items</h2>
+      <ul>
+        <% list.items.forEach(item => { %>
+          <li><%= item %></li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No items yet. (You can add this feature later!)</p>
+    <% } %>
+
+    <p>
+      <a href="/lists">← Back to all lists</a>
+    </p>
+  </main>
+</body>
+</html>

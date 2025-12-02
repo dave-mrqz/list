@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Lists</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Your Lists</h1>
+      <a href="/lists/new">+ New List</a>
+    </header>
+
+    <% if (lists.length === 0) { %>
+      <p>You don't have any lists yet.</p>
+      <a href="/lists/new">Create your first list</a>
+    <% } else { %>
+      <ul class="card-list">
+        <% lists.forEach(list => { %>
+          <li class="card">
+            <h2><a href="/lists/<%= list._id %>"><%= list.title %></a></h2>
+            <small>Created: <%= list.createdAt.toLocaleString() %></small>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+    <p><a href="/">← Back to Home</a></p>
+  </main>
+</body>
+</html>
